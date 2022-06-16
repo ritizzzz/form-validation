@@ -67,3 +67,32 @@ console.log(string5.match(/\d\s\w/g))
 // 2 digits a space and 6 letter word
 const string6 = '10 avenue';
 console.log(string6.match(/\d{2}\s\w{6}/g))
+
+
+// special characters
+console.log('special characters');
+// '+' one or more character
+// '\' the escape character
+// '[]' character set
+// '[^]' negate character set
+// '?' zero or one quantifier - either a zero or one time
+// '.' any character whatsoever - except the new line chracter
+// '*' the zero or more quantifer
+
+const string7 = 'the quick brown fox jumped over the lazy dog'
+// both a and an matches, a-z to can appear zero to one time
+console.log(string7.match(/a[a-z]?/g)); 
+// any character
+console.log(string7.match(/.+/g))
+// a-z after a can appear as many times as it likes
+console.log(string7.match(/a[a-z]*/g))
+
+// starting and ending patterns
+// '^' outside of the character set means it must be at the start
+// '$' five letter must be at the end as well
+
+const string8 = 'hello';
+//match - just match a five letter word
+console.log(string8.match(/^[a-z]{5}$/g));
+// no match
+console.log(string7.match(/^[a-z]{5}$/g));
