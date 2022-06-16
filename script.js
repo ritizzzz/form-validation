@@ -48,3 +48,22 @@ console.log(number.match(/[0-9]{10,12}/g))
 // match at least up to 12 characters so 10 characters don't match
 console.log(number.match(/[0-9]{12,}/g))
 
+//meta characters
+console.log('meta characters');
+//  \d same as [0-9]
+// \w match world character a-z, A-Z, 0-9 and _
+// \s spaces and tabs
+// \t matches tab
+
+const string4 = '   the quick brown box jumped over the 38 lazy dog';
+console.log(string4.match(/\d/gi));
+console.log(string4.match(/\w/gi));
+console.log(string4.match(/\s/gi));
+
+// first is digit second is space and third must be some word character
+const string5 = '3 adfs 33klads'
+console.log(string5.match(/\d\s\w/g))
+
+// 2 digits a space and 6 letter word
+const string6 = '10 avenue';
+console.log(string6.match(/\d{2}\s\w{6}/g))
