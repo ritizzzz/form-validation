@@ -96,3 +96,11 @@ const string8 = 'hello';
 console.log(string8.match(/^[a-z]{5}$/g));
 // no match
 console.log(string7.match(/^[a-z]{5}$/g));
+
+// alternate characters
+console.log('alternate characters');
+// | this means match either one or other so d|f match d or f
+const string9 = 'crazy rabbit pet rabbit';
+// match pet rabbit or toy rabbit or just rabbit
+console.log(string9.match(/(pet|toy)? rabbit/g))
+

@@ -1,6 +1,9 @@
 const inputs = document.querySelectorAll('input');
 const patterns = {
-    telephone: /^0\d{10}$/
+    telephone: /^0\d{10}$/,
+    username: /^[a-z\d]{5,12}$/i,
+    password: /^[\w@-]{8,20}$/,
+    slug: /^[a-z\d-]{8,20}$/
 };
 
 function validate(field, regex){
@@ -17,4 +20,3 @@ inputs.forEach(input => {
         validate(input, patterns[input.name]);
     });
 });
-
